@@ -58,7 +58,22 @@ This project is licensed under the terms of the `LICENSE` file.
 * Auto-evolution of a set of best base prompts for different types of queries.
 * Implementation of a small "consensus tribunal" where several models vote on the best response to present.
 
+## ❤️ Support Us on Ko-fi
 
+If you find this project useful or interesting, consider supporting it with a coffee ☕:
+
+[![Buy me a coffee on Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/novaipal)
+
+Your support helps us keep building SynergyAI and sharing it with the world 🚀
+
+
+## ❤️ Apóyanos en Ko-fi
+
+Si este proyecto te parece útil o interesante, considera apoyarlo con un café ☕:
+
+[![Invítame un café en Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/novaipal)
+
+Esto nos ayuda a seguir desarrollando SynergyAI y compartirlo con el mundo 🚀
 
 
 
