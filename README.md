@@ -77,5 +77,10 @@ Esto nos ayuda a seguir desarrollando SynergyAI y compartirlo con el mundo 🚀
 
 ![GitHub stars](https://img.shields.io/github/stars/githubmoore/SynergyAI)
 ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)
+![License](https://img.shields.io/github/license/githubmoore/SynergyAI)
+![Build Status](https://img.shields.io/github/workflow/status/githubmoore/SynergyAI/CI)
+![Version](https://img.shields.io/github/v/release/githubmoore/SynergyAI)
+![Last Commit](https://img.shields.io/github/last-commit/githubmoore/SynergyAI)
+![Contributors](https://img.shields.io/github/contributors/githubmoore/SynergyAI)
 
 
