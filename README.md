@@ -2,6 +2,9 @@
 
 This project aims to create a dynamic ecosystem of interconnected, open-source generative AI models that cooperate to improve response quality, optimize energy consumption, refine human language for machine processing, and divide and conquer complex queries.
 
+[![The SynergyAI Project: Revolutionizing AI - First Look and Demo](https://img.youtube.com/vi/MZiub3PaKWY/maxresdefault.jpg)](https://youtu.be/MZiub3PaKWY)
+
+
 ## Core Concepts
 
 1.  **Interconnected AI Network:**
