@@ -29,13 +29,36 @@ This project aims to create a dynamic ecosystem of interconnected, open-source g
     * Each model specializes in specific tasks according to its strengths (e.g., creativity, mathematical precision).
 
 7. **Self-Correction and Internal Feedback:**
-    * The system uses a mini-cycle of internal feedback among models to compare and correct their own answers before presenting a final response to the human.
+    *   The system uses a mini-cycle of internal feedback among models to compare and correct their own answers before presenting a final response to the human.
 
 ## Advanced Capabilities
+
+*   The system will dynamically measure the "computational cost" and "accuracy gain" in real-time.
+*   Shared embeddings across models for better understanding of divided questions.
+*   Self-training in "energy optimization".
+*   Auto-evolution of a set of best base prompts for different types of queries.
+*   Implementation of a small "consensus tribunal" where several models vote on the best response to present.
+
+## Contributing
+
+We welcome contributions to the project! If you'd like to help, please follow these steps:
+
+1.  **Fork** the repository on [GitHub](https://github.com/your-username/your-repository).
+2.  **Clone** your fork to your local machine.
+3.  Create a new **branch** for your changes.
+4.  Make your **changes** and **commit** them.
+5.  **Push** your changes to your forked repository.
+6.  Open a **pull request** to the main repository.
+
+This project is licensed under the terms of the `LICENSE` file.
 
 * The system will dynamically measure the "computational cost" and "accuracy gain" in real-time.
 * Shared embeddings across models for better understanding of divided questions.
 * Self-training in "energy optimization".
 * Auto-evolution of a set of best base prompts for different types of queries.
 * Implementation of a small "consensus tribunal" where several models vote on the best response to present.
+
+
+
+
 
