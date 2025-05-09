@@ -21,12 +21,11 @@ const AIRecommendationSchema = z.object({
   name: z.string().describe("The official name of the AI tool or model (e.g., 'DALL-E 3', 'GitHub Copilot')."),
   logoUrl: z
     .string()
-    .url()
     .describe("A URL to an image representing the AI tool. Use 'https://picsum.photos/50/50' as a placeholder if a real logo isn't known, add a query parameter based on the task category e.g. ?<category_keyword>."),
   description: z
     .string()
     .describe("A brief (1-2 sentences) description of the AI tool's capabilities and specialization relevant to the user's query."),
-  websiteUrl: z.string().url().describe('The official website URL where the user can access or learn more about the AI tool.'),
+  websiteUrl: z.string().describe('The official website URL where the user can access or learn more about the AI tool.'),
   taskCategory: z
     .string()
     .describe("The primary task category identified for the user's query (e.g., 'Image Generation', 'Code Generation', 'Text Summarization')."),
@@ -48,9 +47,9 @@ Determine the primary task category (e.g., 'Image Generation', 'Code Generation'
 Based on the identified task category, recommend 1 to 3 suitable and well-known AI tools or models.
 For each recommendation, you must provide:
 - name: The official name of the AI tool/model.
-- logoUrl: A placeholder image URL. Construct this URL as 'https://picsum.photos/50/50?query=AI' where 'AI' can be replaced by a one-word keyword for the task category (e.g., 'image', 'code', 'text').
+- logoUrl: A placeholder image URL. Construct this URL as 'https://picsum.photos/50/50?query=AI' where 'AI' can be replaced by a one-word keyword for the task category (e.g., 'image', 'code', 'text'). This must be a valid URL.
 - description: A brief (1-2 sentences) description of what the AI does and its specialization relevant to the query.
-- websiteUrl: The official website URL for the AI tool/model. If an official URL for a specific model (like GPT-4) is not directly linkable, provide the URL to the platform offering it (e.g., OpenAI's website).
+- websiteUrl: The official website URL for the AI tool/model. If an official URL for a specific model (like GPT-4) is not directly linkable, provide the URL to the platform offering it (e.g., OpenAI's website). This must be a valid URL.
 - taskCategory: The identified task category.
 
 Ensure your response strictly adheres to the JSON schema provided for the output.
@@ -79,7 +78,7 @@ const recommendAiShortcutsFlow = ai.defineFlow(
     inputSchema: RecommendAIShortcutsInputSchema,
     outputSchema: RecommendAIShortcutsOutputSchema,
   },
-  async input => {
+  async (input: RecommendAIShortcutsInput): Promise<RecommendAIShortcutsOutput> => {
     const {output} = await recommendAiShortcutsPrompt(input);
     if (!output) {
         throw new Error("No output received from AI for recommendations.");
@@ -87,7 +86,10 @@ const recommendAiShortcutsFlow = ai.defineFlow(
     // Ensure logoUrl has a query param based on taskCategory for picsum
     const processedRecommendations = output.recommendations.map(rec => {
       let logoUrl = rec.logoUrl;
-      if (logoUrl.startsWith('https://picsum.photos/50/50')) {
+      // Basic validation if it's a picsum URL, then format it.
+      // More robust URL validation could be done here if needed,
+      // but the primary fix is removing .url() from Zod schema for the AI.
+      if (typeof logoUrl === 'string' && logoUrl.startsWith('https://picsum.photos/50/50')) {
         const categoryKeyword = rec.taskCategory.split(' ')[0].toLowerCase() || 'abstract';
         logoUrl = `https://picsum.photos/50/50?query=${encodeURIComponent(categoryKeyword)}`;
       }
@@ -97,3 +99,4 @@ const recommendAiShortcutsFlow = ai.defineFlow(
     return { recommendations: processedRecommendations };
   }
 );
+
