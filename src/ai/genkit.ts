@@ -17,7 +17,7 @@ if (!geminiApiKey) {
 export const ai = genkit({
   plugins: [
     googleAI({
-      apiKey: geminiApiKey || "AIzaSyC3Bcxyz6QJ4MvS9J72-p1zOpPOHPw-qyY", // Use placeholder if not set
+      apiKey: geminiApiKey || "", // Use placeholder if not set
     }),
   ],
   // Default model for all flows, can be overridden per flow/prompt
