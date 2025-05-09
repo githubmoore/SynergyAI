@@ -24,3 +24,9 @@ export const CollaborativeOutputRefinementSchema = z.object({
   modelNames: z.string().min(1, "Model names are required (comma-separated)."),
 });
 export type CollaborativeOutputRefinementInput = z.infer<typeof CollaborativeOutputRefinementSchema>;
+
+// Schema for the form input that will trigger AI recommendations
+export const AIRecommendationsQuerySchema = z.object({
+  query: z.string().min(1, "Query is required to get AI recommendations."),
+});
+export type AIRecommendationsQueryInput = z.infer<typeof AIRecommendationsQuerySchema>;
