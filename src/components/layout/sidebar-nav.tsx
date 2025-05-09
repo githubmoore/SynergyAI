@@ -1,9 +1,10 @@
+
 "use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { LucideIcon } from "lucide-react";
-import { Bot, LayoutDashboard, Route, Sparkles, UsersRound, Zap } from "lucide-react";
+import { AppWindow, Bot, LayoutDashboard, Route, Sparkles, UsersRound, Zap } from "lucide-react";
 import {
   SidebarMenu,
   SidebarMenuItem,
@@ -24,6 +25,7 @@ export const navItems: NavItem[] = [
   { href: "/self-prompting-optimization", label: "Prompt Optimization", icon: Sparkles },
   { href: "/energy-aware-model-selection", label: "Energy-Aware Selection", icon: Zap },
   { href: "/collaborative-output-refinement", label: "Output Refinement", icon: UsersRound },
+  { href: "/ai-tools", label: "AI Tools", icon: AppWindow },
 ];
 
 export function SidebarNav() {

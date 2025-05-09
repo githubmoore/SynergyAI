@@ -2,7 +2,7 @@
 "use client";
 
 import type { LucideIcon } from "lucide-react";
-import { LayoutDashboard, Route, Sparkles, Zap, UsersRound } from "lucide-react";
+import { LayoutDashboard, Route, Sparkles, Zap, UsersRound, AppWindow } from "lucide-react";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import type { PageIconName } from "./icon-types";
 
@@ -12,6 +12,7 @@ const iconMap: Record<PageIconName, LucideIcon> = {
   Sparkles,
   Zap,
   UsersRound,
+  AppWindow, // Added AppWindow
 };
 
 interface AppHeaderProps {
