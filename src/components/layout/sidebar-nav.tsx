@@ -4,7 +4,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { LucideIcon } from "lucide-react";
-import { AppWindow, Bot, LayoutDashboard, Route, Sparkles, UsersRound, Zap } from "lucide-react";
+import { AppWindow, Bot, LayoutDashboard, Lightbulb, Route, Sparkles, UsersRound, Zap } from "lucide-react"; // Added Lightbulb
 import {
   SidebarMenu,
   SidebarMenuItem,
@@ -22,6 +22,7 @@ export interface NavItem {
 export const navItems: NavItem[] = [
   { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard, matchExact: true },
   { href: "/dynamic-query-routing", label: "Query Routing", icon: Route },
+  { href: "/ai-recommender", label: "AI Recommender", icon: Lightbulb }, // Added AI Recommender
   { href: "/self-prompting-optimization", label: "Prompt Optimization", icon: Sparkles },
   { href: "/energy-aware-model-selection", label: "Energy-Aware Selection", icon: Zap },
   { href: "/collaborative-output-refinement", label: "Output Refinement", icon: UsersRound },
