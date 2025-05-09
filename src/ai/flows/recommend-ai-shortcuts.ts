@@ -12,12 +12,12 @@
 import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
 
-export const RecommendAIShortcutsInputSchema = z.object({
+const RecommendAIShortcutsInputSchema = z.object({
   query: z.string().describe('The user query to analyze for AI tool recommendations.'),
 });
 export type RecommendAIShortcutsInput = z.infer<typeof RecommendAIShortcutsInputSchema>;
 
-export const AIRecommendationSchema = z.object({
+const AIRecommendationSchema = z.object({
   name: z.string().describe("The official name of the AI tool or model (e.g., 'DALL-E 3', 'GitHub Copilot')."),
   logoUrl: z
     .string()
@@ -33,7 +33,7 @@ export const AIRecommendationSchema = z.object({
 });
 export type AIRecommendation = z.infer<typeof AIRecommendationSchema>;
 
-export const RecommendAIShortcutsOutputSchema = z.object({
+const RecommendAIShortcutsOutputSchema = z.object({
   recommendations: z.array(AIRecommendationSchema).describe('A list of 1 to 3 AI tool recommendations.'),
 });
 export type RecommendAIShortcutsOutput = z.infer<typeof RecommendAIShortcutsOutputSchema>;
