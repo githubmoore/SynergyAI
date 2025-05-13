@@ -5,6 +5,8 @@ This project aims to create a dynamic ecosystem of interconnected, open-source g
 [![The SynergyAI Project: Revolutionizing AI - First Look and Demo](https://img.youtube.com/vi/MZiub3PaKWY/maxresdefault.jpg)](https://youtu.be/Mb6KtDq9Ulc)
 
 # **Are you interested in collaborating or giving feedback?**
+https://github.com/githubmoore/SynergyAI/blob/master/SynergyAI_Presentacion_Ejecutiva.pdf
+https://github.com/githubmoore/SynergyAI/blob/master/SynergyAI_Executive_Presentation-ENG.pdf
 https://github.com/githubmoore/SynergyAI/blob/master/SynergyAI_Presentacion_Ejecutiva.md
 https://github.com/githubmoore/SynergyAI/blob/master/SynergyAI_Executive_Presentation-ENG.md
 
