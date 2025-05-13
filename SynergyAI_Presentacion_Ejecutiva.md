@@ -58,7 +58,8 @@ Estrategia de Venta: Venta institucional, convenios con ministerios o fundacione
 
 # **¿Te interesa colaborar o dar feedback?**
 
-Video demo: https://youtu.be/MZiub3PaKWY  
+Presentación + Demo (2:51 recomendado para empezar): https://youtu.be/Mb6KtDq9Ulc
+Demo rápido sin audio (1:09): https://youtu.be/MZiub3PaKWY
 GitHub: https://github.com/githubmoore/SynergyAI
 
 Email: freelance.alexander@outlook.com  
